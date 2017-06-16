@@ -4,7 +4,8 @@
 # Get-DrsRule distinguishes 3 ruletypes; VM to Host Affinity, VM VM Affinity and VM VM anti Affinity.
 #
 # For each Cluster in a vCenter Server, this script:
-# 1. Creates a dump of the configured DRS rules,
+# 1. Creates a dump of the configured DRS rules. For each cluster a file named <cluster name>.txt
+#    is created in the configured $outpath.
 # 2. Check the configured DRS rules against the actual situation (e.g. Is a VM to Host Affinity
 #    "should" rule enforced or not?).
 # 3. The status of rules (not)enabled and the power state of VMs is also shown. 
