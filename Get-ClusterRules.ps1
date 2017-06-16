@@ -11,7 +11,7 @@
 # 3. The status of rules (not)enabled and the power state of VMs is also shown. 
 #
 # Before running this script do the following:
-# 1. Configure the variable $OutFile
+# 1. Configure the variable $OutPath
 # 2. Connect to a vCenter Server, using the Connect-VIServer cmdlet
 #
 # This script still needs improvements.
@@ -32,7 +32,7 @@ Write-Host " "
 $clusters=Get-Cluster
 for ($c=0; $c -lt $clusters.Count; $c++) {
     $cluster=$clusters[$c].Name
-    # Change $OutFile to your needs.
+    # $OutFile contains the dump for this cluster
     $OutFile=$OutPath+$cluster+".txt"
     
     Write-Host "=========================================================================================================================="
