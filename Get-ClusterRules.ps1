@@ -18,8 +18,9 @@
 
 
 # Declare Variables and connect to vCenter Server
+$OutPath="D:\Users\Paul\Documents\TRAINING\WindowsPowerShell\"
 $vCenter="vcsa.virtual.local"
-$user="administrator@vsphere.local"
+$User="administrator@vsphere.local"
 
 Connect-VIServer -Server $vCenter -User $user 
 
@@ -32,7 +33,7 @@ $clusters=Get-Cluster
 for ($c=0; $c -lt $clusters.Count; $c++) {
     $cluster=$clusters[$c].Name
     # Change $OutFile to your needs.
-    $OutFile="D:\Users\Paul\Documents\TRAINING\WindowsPowerShell\"+$cluster+".txt"
+    $OutFile=$OutPath+$cluster+".txt"
     
     Write-Host "=========================================================================================================================="
     Write-Host "Cluster name:" $cluster
