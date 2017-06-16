@@ -14,7 +14,7 @@
 # 1. Configure the variable $OutPath
 # 2. Connect to a vCenter Server, using the Connect-VIServer cmdlet
 #
-# This script still needs improvements.
+#
 
 
 # Declare Variables and connect to vCenter Server
